@@ -10,7 +10,7 @@ public class MainReflection {
         try {
             Class<?> classStudent = Class.forName("reflection.Student");
             try {
-                Student st = (Student) classStudent.newInstance();
+                reflection.Student st = (reflection.Student) classStudent.newInstance();
 //                st.getName
                 Method[] methods = classStudent.getMethods();
                 for (Method method: methods) {
