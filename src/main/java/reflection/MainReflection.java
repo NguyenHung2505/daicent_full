@@ -8,9 +8,9 @@ public class MainReflection {
     public static void main(String[] args) {
 //        tao object ma khong dung tu khoa new
         try {
-            Class<?> classStudent = Class.forName("reflection.Student");
+            Class<?> classStudent = Class.forName("reflection.Product");
             try {
-                reflection.Student st = (reflection.Student) classStudent.newInstance();
+                Product st = (Product) classStudent.newInstance();
 //                st.getName
                 Method[] methods = classStudent.getMethods();
                 for (Method method: methods) {
@@ -31,7 +31,7 @@ public class MainReflection {
                         f.setAccessible(true);
                         f.setInt(st,25); // gán cứng cho st.age = 25(age)
                     }
-                    System.out.println("age = " + st.getAge());
+                    System.out.println("age = " + st.getPrice());
                 }
 
             } catch (InstantiationException e) {
